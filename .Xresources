@@ -1,0 +1,54 @@
+! Цветовая схема
+
+URxvt.color0: #000000
+URxvt.color1: #C75646
+!URxvt.color2: #8EB33B
+URxvt.color2: #3D3D3D
+URxvt.color3: #D0B03C
+URxvt.color4: #72B3CC
+URxvt.color5: #C8A0D1
+URxvt.color6: #218693
+URxvt.color7: #B0B0B0
+URxvt.color8: #5D5D5D
+URxvt.color9: #E09690
+URxvt.color10: #CDEE69
+URxvt.color11: #FFE377
+URxvt.color12: #9CD9F0
+URxvt.color13: #FBB1F9
+URxvt.color14: #77DFD8
+URxvt.color15: #F7F7F7
+
+! Установка шрифта "Monaco" с размером 10 пунктов c сглаживанием
+URxvt.font: xft:Monaco-8:antialias=true
+URxvt.boldFont: xft:Monaco-8:bold:antialias=true
+!URxvt.letterspace: -2
+
+! Цвет фона
+URxvt*background: #3d3d3d
+! Цвет текста
+URxvt*foreground: #f7f7f7
+! Выделение подчеркнутого текста синим [ссылок]
+URxvt.underlineColor: blue
+
+! Цвет курсора
+URxvt.cursorColor: #f7f7f7
+! Мерцание курсора
+URxvt.cursorBlink: true
+
+! Скроллбар: присутствует
+URxvt*scrollBar: false
+
+
+! подгружаем плагины
+URxvt.perl-ext-common: default,matcher,vtwheel
+URxvt.url-launcher: /usr/bin/chromium
+URxvt.matcher.button: 1
+
+
+! Псевдопрозрачность
+URxvt.transparent: false
+! Уменьшение (-100 .. -1) или увеличение (0 .. 100) яркости прозрачного фона
+URxvt.shading: 50
+
+! первоночальный размер окна
+URxvt.geometry: 80x25

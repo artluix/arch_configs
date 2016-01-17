@@ -1,0 +1,12 @@
+# /dev/sda2
+UUID=a897f813-3090-4c38-ae92-36e4c395540e	/         	ext4      	rw,noatime,discard,barrier=0,data=ordered	0 1
+
+# /dev/sda1
+UUID=C442-8775      	/boot     	vfat      	rw,noatime,discard,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro	0 2
+
+# /dev/sda3
+UUID=6b44f779-466b-4486-a7ed-89287d6e4ad4	/home     	ext4      	rw,noauto,x-systemd.automount,noatime,discard,barrier=0,data=ordered	0 2
+
+# Chromium cache
+tmpfs	/home/artluix/.cache	tmpfs	noatime,nodev,nosuid,size=400M	0	0
+
