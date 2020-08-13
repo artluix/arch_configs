@@ -1,0 +1,21 @@
+{
+    "name": "smyck",
+    "displayName": "Smyck",
+    "description": "My smyck color theme",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.46.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Smyck",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Smyck-color-theme.json"
+            }
+        ]
+    }
+}

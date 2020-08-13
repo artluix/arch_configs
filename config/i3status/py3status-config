@@ -1,0 +1,69 @@
+
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+
+general {
+    colors = true
+    interval = 5
+}
+
+order += "spotify"
+order += "vpn_status"
+order += "net_rate"
+order += "disk /"
+order += "memory"
+order += "volume master"
+order += "keyboard_layout"
+order += "tztime local"
+
+spotify {
+    cache_timeout = 1
+    color_playing = ""
+}
+
+vpn_status {
+	cache_timeout = 1
+	check_pid = True
+	pidfile = "/sys/class/net/tun0/dev_id"
+	on_click 2 = "exec ~/.vpn/start_vpn.sh"
+	on_click 3 = "exec ~/.vpn/stop_vpn.sh"
+}
+
+net_rate {
+    #hide_if_zero = True
+    format = "NET: {down} ⥯ {up}"
+    format_value = "{value:.0f} {unit}"
+}
+
+disk "/" {
+    format = "HDD: %avail"
+}
+
+memory {
+    format = "RAM: %available"
+    threshold_degraded = "1G"
+    format_degraded = "MEMORY < %available"
+}
+
+volume master {
+    format = "♪: %volume"
+    format_muted = "♪: muted (%volume)"
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
+    on_click 2 = "exec pavucontrol"
+    on_click 1 = "exec pacmd set-card-profile 2 output:iec958-stereo"
+    on_click 3 = "exec pacmd set-card-profile 2 output:analog-stereo"
+    on_click 4 = "exec pactl set-sink-volume @DEFAULT_SINK@ +1%"
+    on_click 5 = "exec pactl set-sink-volume @DEFAULT_SINK@ -1%"
+}
+
+keyboard_layout {
+    cache_timeout = 1
+}
+
+tztime local {
+    format = "%-d-%b-%Y %H:%M:%S"
+}

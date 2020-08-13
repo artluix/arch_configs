@@ -32,10 +32,11 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-setxkbmap -layout "us,ru" -option "grp:alt_shift_toggle,grp_led:scroll"
-exec i3
+# disable unused monitors
+#xrandr --output HDMI-0 --off& # (Samsung TV)
+#xrandr --output DP-0 --off& # (Dell U2419H)
+#nvidia-settings --load-config-only&
 
-#xclock -geometry 50x50-1+1 &
-#xterm -geometry 80x50+494+51 &
-#xterm -geometry 80x20+494-0 &
-#exec xterm -geometry 80x66+0+0 -name login
+setxkbmap -layout us,ru -model pc105 -option grp:alt_shift_toggle
+
+exec i3
